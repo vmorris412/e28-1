@@ -19,7 +19,7 @@ let app = new Vue({
     },
     computed: {
         displayWord() {
-            var wordAsArray = this.word.split('');
+            let wordAsArray = this.word.split('');
             wordAsArray.sort(() => Math.random() - 0.5);
             return wordAsArray.join('');
         }

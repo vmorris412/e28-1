@@ -6,9 +6,21 @@ const app = new Vue({
         qty: '',
         items: [],
         itemsCount: 0,
+        //newItem: {},
     },
     methods: {
         addItem() {
+
+            // Don't create the newItem object via a data property because you want each new item to be unique
+            // this.newItem.name = this.item;
+            // this.newItem.qty = this.qty;
+
+            // Instead, you could create a new local object so it's unique each time:
+            // let newItem = {}
+            // newItem.name = this.item;
+            // newItem.qty = this.qty;
+
+            // Or, use the new object shorthand as I've done here:
             this.items.push({ name: this.item, qty: this.qty });
             this.itemsCount += this.qty;
 
